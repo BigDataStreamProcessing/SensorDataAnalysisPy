@@ -25,6 +25,4 @@ def get_kafka_sink_table(table_env, properties: dict):
             .build()
     )
 
-    return
-
 
