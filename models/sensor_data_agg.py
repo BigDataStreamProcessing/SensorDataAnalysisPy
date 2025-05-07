@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 import json
 
 @dataclass
@@ -11,4 +11,5 @@ class SensorDataAgg:
     count: int
     sum: int
 
-
+    def to_json(self) -> str:
+        return json.dumps(asdict(self))
